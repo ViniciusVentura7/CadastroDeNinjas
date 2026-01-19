@@ -1,0 +1,41 @@
+package br.com.learning.CadastroDeNinjas.Missoes;
+
+import br.com.learning.CadastroDeNinjas.Ninjas.NinjaModel;
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "tb_missoes")
+public class MissoesModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nome;
+    private char dificuldade;
+    private NinjaModel ninja;
+
+    public MissoesModel() {
+    }
+
+    public MissoesModel(Long id, String nome, char dificuldade) {
+        this.id = id;
+        this.nome = nome;
+        this.dificuldade = dificuldade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public char getDificuldade() {
+        return dificuldade;
+    }
+
+    public void setDificuldade(char dificuldade) {
+        this.dificuldade = dificuldade;
+    }
+}
