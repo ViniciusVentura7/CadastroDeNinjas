@@ -1,4 +1,4 @@
-package br.com.learning.CadastroDeNinjas.Ninjas;
+package br.com.learning.CadastroDeNinjas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
