@@ -1,0 +1,4 @@
+CREATE TABLE tb_missoes (
+id BIGINT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(255),
+dificuldade CHAR(1));
