@@ -2,9 +2,17 @@ package br.com.learning.CadastroDeNinjas.Missoes;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("missoes")
 public class MissoesController {
+
+    private MissoesService missoesService;
+
+    public MissoesController(MissoesService missoesService) {
+        this.missoesService = missoesService;
+    }
 
     @GetMapping("/tela_missoes_controller")
     public String telaMissoesController(){
@@ -19,8 +27,8 @@ public class MissoesController {
 
     // Read
     @GetMapping("/listar")
-    public String mostrarMissoes(){
-        return "Mostrar missoes";
+    public List<MissoesModel> listarMissoes(){
+        return missoesService.listarMissoes();
     }
 
     @GetMapping("/listarId")
