@@ -15,8 +15,8 @@ public class NinjaService {
     }
 
     // Adicionar ninja
-    public String adicionarNinja(){
-        return "ninja adicionado.";
+    public NinjaModel adicionarNinja(NinjaModel ninja){
+        return ninjaRepository.save(ninja);
     }
 
 
